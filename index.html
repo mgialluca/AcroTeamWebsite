@@ -40,11 +40,27 @@
   <section class="gallery-preview">
     <h2>Recent performances</h2>
     <div class="gallery-grid">
-      <!-- Replace these placeholder tiles with real images/clips from assets/images or assets/gifs -->
-      <div class="gallery-tile placeholder"></div>
-      <div class="gallery-tile placeholder"></div>
-      <div class="gallery-tile placeholder"></div>
-      <div class="gallery-tile placeholder"></div>
+      <!-- Shows the first 4 videos from the Gallery page. Keep this in sync with pages/gallery.html if you reorder things. -->
+      <div class="gallery-tile">
+        <video class="gallery-thumb lightbox-video" muted playsinline preload="metadata">
+          <source src="assets/gifs/Aslan-Lisa-Megan_LudicrousSpeed_3HighPop.mp4#t=0.5" type="video/mp4">
+        </video>
+      </div>
+      <div class="gallery-tile">
+        <video class="gallery-thumb lightbox-video" muted playsinline preload="metadata">
+          <source src="assets/gifs/Aslan-Megan_H2H_InGym.mp4#t=0.5" type="video/mp4">
+        </video>
+      </div>
+      <div class="gallery-tile">
+        <video class="gallery-thumb lightbox-video" muted playsinline preload="metadata">
+          <source src="assets/gifs/ChaChaSlide_DoublePop.mp4#t=0.5" type="video/mp4">
+        </video>
+      </div>
+      <div class="gallery-tile">
+        <video class="gallery-thumb lightbox-video" muted playsinline preload="metadata">
+          <source src="assets/gifs/LisaBackLayout_Banq_Ty-Aslan.mp4#t=0.5" type="video/mp4">
+        </video>
+      </div>
     </div>
     <a href="pages/gallery.html" class="text-link">View full gallery <span class="arrow">&rarr;</span></a>
   </section>
@@ -54,10 +70,10 @@
     <div class="about-copy">
       <h2>About us</h2>
       <p>
-        Yeetus Maximus is an acrobatics team built on trust, strength, and
-        precision. We train together, perform together, and bring
-        energy to every stage we enter. Let us entertain you! Lisa dear god 
-        help me write better text. 
+        Yeetus Maximus is a competitive acro team built on trust, strength, and
+        precision. We train together, compete together, and bring that same
+        energy to every stage we perform on — from local showcases to
+        booked events across the region.
       </p>
       <a href="pages/team.html" class="text-link">Learn more about us <span class="arrow">&rarr;</span></a>
     </div>
@@ -67,5 +83,6 @@
     <span>Yeetus Maximus — Seattle, WA</span>
   </footer>
 
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -7,12 +7,86 @@
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-  <h1>Gallery</h1>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="team.html">Team</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+
+  <header class="site-header">
+    <span class="logo">YEETUS MAXIMUS</span>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="gallery-intro">
+    <p>A look at what we do — click any clip to watch it full size.</p>
+  </section>
+
+  <section class="gallery-page">
+    <!--
+      To add a new video: copy one .gallery-tile block below, update the
+      two file paths (they should match), and paste it wherever you want
+      it to appear in the grid.
+    -->
+    <div class="gallery-tile">
+      <video class="gallery-thumb lightbox-video" muted playsinline preload="metadata">
+        <source src="../assets/gifs/Aslan-Lisa-Megan_LudicrousSpeed_3HighPop.mp4#t=0.5" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="gallery-tile">
+      <video class="gallery-thumb lightbox-video" muted playsinline preload="metadata">
+        <source src="../assets/gifs/Aslan-Megan_H2H_InGym.mp4#t=0.5" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="gallery-tile">
+      <video class="gallery-thumb lightbox-video" muted playsinline preload="metadata">
+        <source src="../assets/gifs/ChaChaSlide_DoublePop.mp4#t=0.5" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="gallery-tile">
+      <video class="gallery-thumb lightbox-video" muted playsinline preload="metadata">
+        <source src="../assets/gifs/LisaBackLayout_Banq_Ty-Aslan.mp4#t=0.5" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="gallery-tile">
+      <video class="gallery-thumb lightbox-video" muted playsinline preload="metadata">
+        <source src="../assets/gifs/LisaCorbet_Banq_Ty-Aslan.mp4#t=0.5" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="gallery-tile">
+      <video class="gallery-thumb lightbox-video" muted playsinline preload="metadata">
+        <source src="../assets/gifs/LisaLaunch_SanSoloTrois.mp4#t=0.5" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="gallery-tile">
+      <video class="gallery-thumb lightbox-video" muted playsinline preload="metadata">
+        <source src="../assets/gifs/MeganBackTuck_SansSoloTrois.mp4#t=0.5" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="gallery-tile">
+      <video class="gallery-thumb lightbox-video" muted playsinline preload="metadata">
+        <source src="../assets/gifs/ThreeHighs_SansSoloTrois.mp4#t=0.5" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="gallery-tile">
+      <video class="gallery-thumb lightbox-video" muted playsinline preload="metadata">
+        <source src="../assets/gifs/Ty-Kenny-Lisa_Banq_2BackTucksTempo.mp4#t=0.5" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span>Yeetus Maximus — Seattle, WA</span>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>

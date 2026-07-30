@@ -21,35 +21,64 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Lightbox: click any image with class "lightbox-img" to view full size
+// Lightbox: click any image ("lightbox-img") or video ("lightbox-video")
+// to view/play it full size. Thumbnail videos stay muted and paused —
+// playback (with sound) only starts once opened in the lightbox.
 document.addEventListener("DOMContentLoaded", () => {
   const lightboxImgs = document.querySelectorAll(".lightbox-img");
-  if (lightboxImgs.length === 0) return;
+  const lightboxVideos = document.querySelectorAll(".lightbox-video");
+  if (lightboxImgs.length === 0 && lightboxVideos.length === 0) return;
 
   const overlay = document.createElement("div");
   overlay.className = "lightbox-overlay";
   overlay.innerHTML = `
-    <button class="lightbox-close" aria-label="Close full size image">&times;</button>
-    <img src="" alt="">
+    <button class="lightbox-close" aria-label="Close full size view">&times;</button>
+    <img class="lightbox-media" src="" alt="">
+    <video class="lightbox-media" controls playsinline></video>
   `;
   document.body.appendChild(overlay);
 
   const overlayImg = overlay.querySelector("img");
+  const overlayVideo = overlay.querySelector("video");
   const closeBtn = overlay.querySelector(".lightbox-close");
-
-  function openLightbox(src, alt) {
-    overlayImg.src = src;
-    overlayImg.alt = alt;
-    overlay.classList.add("open");
-  }
 
   function closeLightbox() {
     overlay.classList.remove("open");
+    overlayImg.style.display = "none";
     overlayImg.src = "";
+    overlayVideo.pause();
+    overlayVideo.removeAttribute("src");
+    overlayVideo.load();
+    overlayVideo.style.display = "none";
+  }
+
+  function openImage(src, alt) {
+    closeLightbox();
+    overlayImg.src = src;
+    overlayImg.alt = alt;
+    overlayImg.style.display = "block";
+    overlay.classList.add("open");
+  }
+
+  function openVideo(src) {
+    closeLightbox();
+    overlayVideo.src = src;
+    overlayVideo.muted = true;
+    overlayVideo.style.display = "block";
+    overlay.classList.add("open");
+    overlayVideo.play();
   }
 
   lightboxImgs.forEach((img) => {
-    img.addEventListener("click", () => openLightbox(img.src, img.alt));
+    img.addEventListener("click", () => openImage(img.src, img.alt));
+  });
+
+  lightboxVideos.forEach((video) => {
+    video.addEventListener("click", () => {
+      const source = video.querySelector("source");
+      const fullSrc = source.getAttribute("src").split("#")[0];
+      openVideo(fullSrc);
+    });
   });
 
   closeBtn.addEventListener("click", closeLightbox);
