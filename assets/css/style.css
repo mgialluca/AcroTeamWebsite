@@ -62,7 +62,7 @@ img, video {
 /* ---- hero ---- */
 .hero {
   display: grid;
-  grid-template-columns: 0.9fr 1.2fr 0.9fr;
+  grid-template-columns: 0.9fr 1.0fr 0.9fr;
   gap: 0;
   min-height: 420px;
 }
