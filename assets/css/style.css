@@ -62,7 +62,7 @@ img, video {
 /* ---- hero ---- */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1.1fr 1fr;
+  grid-template-columns: 0.85fr 1.3fr 0.85fr;
   min-height: 420px;
 }
 
@@ -82,7 +82,7 @@ img, video {
 }
 
 .hero-copy h1 {
-  font-size: 34px;
+  font-size: 44px;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -162,6 +162,7 @@ img, video {
 .about-photo {
   border-radius: var(--radius);
   max-height: 380px;
+  object-position: center 20%; /* shift up/down: 0% = top of photo, 100% = bottom */
 }
 
 .about-copy h2 {
