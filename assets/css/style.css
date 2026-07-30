@@ -78,7 +78,7 @@ img, video {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 24px 8px;
+  padding: 24px 0px;
   gap: 24px;
 }
 
