@@ -68,7 +68,7 @@ img, video {
 }
 
 .hero-media {
-  flex: 0 0 320px;
+  flex: 0 0 470px;
   overflow: hidden;
   background: var(--surface);
 }
