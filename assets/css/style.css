@@ -74,7 +74,7 @@ img, video {
 
 .hero-copy {
   flex: 0 0 auto;
-  width: 560px;
+  width: 760px;
   display: flex;
   flex-direction: column;
   align-items: center;
