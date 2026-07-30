@@ -39,7 +39,7 @@ img, video {
 
 .logo {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 0.5px;
 }
 
@@ -51,7 +51,7 @@ img, video {
 .main-nav a {
   text-decoration: none;
   color: var(--text-secondary);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .main-nav a.active,
@@ -162,7 +162,7 @@ img, video {
 .about-photo {
   border-radius: var(--radius);
   max-height: 380px;
-  object-position: center 20%; /* shift up/down: 0% = top of photo, 100% = bottom */
+  object-position: center 10%; /* shift up/down: 0% = top of photo, 100% = bottom */
 }
 
 .about-copy h2 {
