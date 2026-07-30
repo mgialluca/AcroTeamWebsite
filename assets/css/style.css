@@ -219,9 +219,9 @@ img, video {
 .team-toggle {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
   width: 100%;
-  padding: 16px 4px;
+  padding: 20px 4px;
   background: none;
   border: none;
   cursor: pointer;
@@ -229,8 +229,8 @@ img, video {
 }
 
 .team-thumb {
-  width: 56px;
-  height: 56px;
+  width: 84px;
+  height: 84px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center; /* adjust per-person via .thumb-[name] rules below to center on faces */
@@ -240,13 +240,13 @@ img, video {
 
 .team-name {
   flex: 1;
-  font-size: 17px;
+  font-size: 21px;
   font-weight: 600;
   color: var(--text-primary);
 }
 
 .plus {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 400;
   color: var(--accent);
   transition: transform 0.2s ease;
@@ -279,8 +279,8 @@ img, video {
 }
 
 .team-photos .extra-photo {
-  width: 160px;
-  height: 160px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
   border-radius: 10px;
   border: 2px solid var(--accent);
@@ -377,13 +377,33 @@ img, video {
     padding-right: 20px;
   }
 
-  .extra-photo-2 {
-    display: none;
+  .team-toggle {
+    gap: 16px;
+    padding: 16px 4px;
+  }
+
+  .team-thumb {
+    width: 56px;
+    height: 56px;
+  }
+
+  .team-name {
+    font-size: 17px;
+  }
+
+  .plus {
+    font-size: 22px;
+  }
+
+  .team-photos {
+    flex-direction: column;
   }
 
   .team-photos .extra-photo {
     width: 100%;
     max-width: 280px;
-    height: 200px;
+    height: 220px;
+    object-fit: contain;
+    background: var(--surface);
   }
 }
