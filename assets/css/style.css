@@ -274,16 +274,20 @@ img, video {
 
 .team-photos {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   padding-bottom: 20px;
 }
 
 .team-photos .extra-photo {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
+  width: auto;
+  height: auto;
+  max-width: 220px;
+  max-height: 220px;
+  object-fit: contain;
   border-radius: 10px;
   border: 2px solid var(--accent);
+  display: block;
 }
 
 /* per-person thumbnail crop adjustments — tweak these to center on faces */
@@ -336,6 +340,26 @@ img, video {
     display: none;
   }
 
+  .hero-show-mobile {
+    border: none !important;
+    flex: 1 1 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-show-mobile video,
+  .hero-show-mobile img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+  }
+
   .hero-copy {
     flex: 1 1 0;
     width: auto;
@@ -350,17 +374,6 @@ img, video {
   .hero-copy .btn {
     padding: 9px 18px;
     font-size: 13px;
-  }
-
-  .hero-show-mobile {
-    flex: 1 1 0;
-    height: 100%;
-  }
-
-  .hero-show-mobile video,
-  .hero-show-mobile img {
-    object-fit: contain;
-    object-position: center;
   }
 
   .gallery-grid {
@@ -395,15 +408,8 @@ img, video {
     font-size: 22px;
   }
 
-  .team-photos {
-    flex-direction: column;
-  }
-
   .team-photos .extra-photo {
-    width: 100%;
-    max-width: 280px;
-    height: 220px;
-    object-fit: contain;
-    background: var(--surface);
+    max-width: 150px;
+    max-height: 180px;
   }
 }
