@@ -61,24 +61,26 @@ img, video {
 
 /* ---- hero ---- */
 .hero {
-  display: grid;
-  grid-template-columns: 0.9fr 1.0fr 0.9fr;
-  gap: 0;
+  display: flex;
+  align-items: stretch;
   min-height: 420px;
 }
 
 .hero-media {
+  flex: 1 1 0;
   overflow: hidden;
   background: var(--surface);
 }
 
 .hero-copy {
+  flex: 0 0 auto;
+  width: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 24px 0;
+  padding: 24px 16px;
   gap: 24px;
 }
 
@@ -162,8 +164,8 @@ img, video {
 
 .about-photo {
   border-radius: var(--radius);
-  max-height: 380px;
-  object-position: center 20%; /* shift up/down: 0% = top of photo, 100% = bottom */
+  max-height: 500px;
+  object-position: center 15%; /* shift up/down: 0% = top of photo, 100% = bottom */
 }
 
 .about-copy h2 {
@@ -188,7 +190,11 @@ img, video {
 /* ---- responsive ---- */
 @media (max-width: 768px) {
   .hero {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .hero-copy {
+    width: 100%;
   }
 
   .hero-media {
