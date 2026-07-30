@@ -212,7 +212,7 @@ img, video {
     align-items: stretch;
   }
 
-  .hero-video {
+  .hero-hide-mobile {
     display: none;
   }
 
@@ -227,7 +227,7 @@ img, video {
     font-size: 26px;
   }
 
-  .hero-photo {
+  .hero-show-mobile {
     flex: 1 1 0;
     height: auto;
   }
