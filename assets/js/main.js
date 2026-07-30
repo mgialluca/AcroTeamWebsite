@@ -62,3 +62,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape" && overlay.classList.contains("open")) closeLightbox();
   });
 });
+
+// Contact form: use the user's typed subject as the actual email subject line
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".contact-form");
+  if (!form) return;
+
+  const subjectField = form.querySelector("#subject");
+  const hiddenSubject = form.querySelector("#subject-hidden");
+
+  form.addEventListener("submit", () => {
+    if (subjectField.value.trim()) {
+      hiddenSubject.value = subjectField.value.trim();
+    }
+  });
+});

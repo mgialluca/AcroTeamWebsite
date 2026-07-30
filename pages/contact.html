@@ -7,12 +7,54 @@
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-  <h1>Contact</h1>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="team.html">Team</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+
+  <header class="site-header">
+    <span class="logo">YEETUS MAXIMUS</span>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-intro">
+    <p>
+      If you're interested in getting in touch, booking us for a gig, or a
+      private lesson with Aslan, please fill out our contact form below!
+    </p>
+  </section>
+
+  <section class="contact-section">
+    <!--
+      IMPORTANT: replace YOUR_FORM_ID below with your real Formspree
+      endpoint after creating a free account at formspree.io.
+      It will look like: https://formspree.io/f/abcdwxyz
+    -->
+    <form class="contact-form" action="https://formspree.io/f/xlgqkbob" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" required>
+      <input type="hidden" name="_subject" id="subject-hidden" value="New message from Yeetus Maximus site">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+
+    <img src="../assets/images/Dan-Megan-Lisa_3High_Gasworks.jpg" alt="Three-high acro stunt at Gasworks Park" class="contact-photo">
+  </section>
+
+  <footer class="site-footer">
+    <span>Yeetus Maximus — Seattle, WA</span>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>
