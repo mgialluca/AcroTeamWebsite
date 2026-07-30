@@ -282,12 +282,13 @@ img, video {
 .team-photos .extra-photo {
   width: auto;
   height: auto;
-  max-width: 220px;
-  max-height: 220px;
+  max-width: 280px;
+  max-height: 280px;
   object-fit: contain;
   border-radius: 10px;
   border: 2px solid var(--accent);
   display: block;
+  cursor: pointer;
 }
 
 /* per-person thumbnail crop adjustments — tweak these to center on faces */
@@ -296,6 +297,45 @@ img, video {
 .thumb-megan  { object-position: center 20%; }
 .thumb-tyler  { object-position: center 20%; }
 .thumb-kenny  { object-position: center 20%; }
+
+/* ---- lightbox ---- */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.87);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  z-index: 1000;
+}
+
+.lightbox-overlay.open {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid var(--accent);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 8px;
+}
 
 /* ---- footer ---- */
 .site-footer {
