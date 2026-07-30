@@ -81,6 +81,11 @@ img, video {
   border-radius: 12px;
 }
 
+.hero-media img,
+.hero-media video {
+  object-position: center 20%;
+}
+
 .hero-copy {
   flex: 0 0 auto;
   width: 660px;
@@ -216,7 +221,7 @@ img, video {
 
   .hero {
     flex-direction: row;
-    height: 150px;
+    height: 180px;
     min-height: 0;
     align-items: stretch;
     gap: 8px;
@@ -232,7 +237,7 @@ img, video {
   }
 
   .hero-copy {
-    flex: 0.85 1 0;
+    flex: 1 1 0;
     width: auto;
     padding: 8px 6px;
     gap: 8px;
@@ -248,8 +253,14 @@ img, video {
   }
 
   .hero-show-mobile {
-    flex: 1.15 1 0;
+    flex: 1 1 0;
     height: 100%;
+  }
+
+  .hero-show-mobile video,
+  .hero-show-mobile img {
+    object-fit: contain;
+    object-position: center;
   }
 
   .gallery-grid {
