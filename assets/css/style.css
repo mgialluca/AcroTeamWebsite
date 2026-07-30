@@ -74,7 +74,7 @@ img, video {
 
 .hero-copy {
   flex: 0 0 auto;
-  width: 360px;
+  width: 460px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,7 +165,7 @@ img, video {
 .about-photo {
   border-radius: var(--radius);
   max-height: 500px;
-  object-position: center 15%; /* shift up/down: 0% = top of photo, 100% = bottom */
+  object-position: center 10%; /* shift up/down: 0% = top of photo, 100% = bottom */
 }
 
 .about-copy h2 {
