@@ -193,6 +193,106 @@ img, video {
   font-size: 15px;
 }
 
+/* ---- team page ---- */
+.team-intro {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 32px 8px;
+}
+
+.team-intro p {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.team-list {
+  list-style: none;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 32px 64px;
+}
+
+.team-member {
+  border-bottom: 1px solid var(--border);
+}
+
+.team-toggle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 16px 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.team-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center; /* adjust per-person via .thumb-[name] rules below to center on faces */
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+}
+
+.team-name {
+  flex: 1;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.plus {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+  width: 20px;
+  text-align: center;
+}
+
+.team-member.open .plus {
+  transform: rotate(45deg);
+}
+
+.team-bio {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 4px;
+}
+
+.team-bio p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  padding-bottom: 16px;
+  max-width: 520px;
+}
+
+.team-photos {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.team-photos .extra-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--accent);
+}
+
+/* per-person thumbnail crop adjustments — tweak these to center on faces */
+.thumb-lisa   { object-position: center 20%; }
+.thumb-aslan  { object-position: center 20%; }
+.thumb-megan  { object-position: center 20%; }
+.thumb-tyler  { object-position: center 20%; }
+.thumb-kenny  { object-position: center 20%; }
+
 /* ---- footer ---- */
 .site-footer {
   padding: 20px 32px;
@@ -221,7 +321,7 @@ img, video {
 
   .hero {
     flex-direction: row;
-    height: 360px;
+    height: 260px;
     min-height: 0;
     align-items: stretch;
     gap: 8px;
@@ -269,5 +369,21 @@ img, video {
 
   .about-preview {
     grid-template-columns: 1fr;
+  }
+
+  .team-intro,
+  .team-list {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .extra-photo-2 {
+    display: none;
+  }
+
+  .team-photos .extra-photo {
+    width: 100%;
+    max-width: 280px;
+    height: 200px;
   }
 }
