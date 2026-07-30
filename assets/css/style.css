@@ -63,11 +63,12 @@ img, video {
 .hero {
   display: flex;
   align-items: stretch;
+  justify-content: center;
   min-height: 420px;
 }
 
 .hero-media {
-  flex: 1 1 0;
+  flex: 0 0 240px;
   overflow: hidden;
   background: var(--surface);
 }
@@ -189,18 +190,46 @@ img, video {
 
 /* ---- responsive ---- */
 @media (max-width: 768px) {
+  .site-header {
+    padding: 12px 16px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  .main-nav {
+    gap: 12px;
+  }
+
+  .main-nav a {
+    font-size: 12px;
+  }
+
   .hero {
-    flex-direction: column;
+    flex-direction: row;
     min-height: 0;
+    align-items: stretch;
+  }
+
+  .hero-video {
+    display: none;
   }
 
   .hero-copy {
-    width: 100%;
+    flex: 1 1 0;
+    width: auto;
+    padding: 16px 8px;
+    gap: 14px;
   }
 
-  .hero-media {
-    flex: 0 0 auto;
-    height: 200px;
+  .hero-copy h1 {
+    font-size: 26px;
+  }
+
+  .hero-photo {
+    flex: 1 1 0;
+    height: auto;
   }
 
   .gallery-grid {
