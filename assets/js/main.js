@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   lightboxImgs.forEach((img) => {
-    img.addEventListener("click", () => openImage(img.src, img.alt));
+    img.addEventListener("click", () => openImage(img.dataset.full || img.src, img.alt));
   });
 
   lightboxVideos.forEach((video) => {

@@ -262,14 +262,37 @@ img, video {
 }
 
 /* ---- team page ---- */
-.team-intro {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 48px 32px 8px;
+.team-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 48px;
+  align-items: center;
+  background: var(--bloodwood);
+  padding: 48px max(32px, calc((100% - 1100px) / 2));
 }
 
-.team-intro p {
-  color: var(--text-secondary);
+.team-hero-photo {
+  margin: 0;
+  border: 3px solid var(--lilac);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 12px 12px 0 var(--gold); /* offset gold "frame" */
+  aspect-ratio: 4 / 3;
+}
+
+.team-hero-copy h1 {
+  color: #fff;
+  font-size: 40px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.team-hero-copy h1 .hl {
+  color: var(--gold);
+}
+
+.team-hero-copy p {
+  color: var(--accent-light);
   font-size: 16px;
 }
 
@@ -341,18 +364,17 @@ img, video {
 }
 
 .team-photos {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   padding-bottom: 20px;
 }
 
 .team-photos .extra-photo {
-  width: auto;
+  width: 100%;
   height: auto;
-  max-width: 280px;
-  max-height: 280px;
-  object-fit: contain;
+  aspect-ratio: 3 / 4;
+  object-fit: cover; /* uniform tiles; the full photo shows in the lightbox */
   border-radius: 10px;
   border: 2px solid var(--accent);
   display: block;
@@ -609,7 +631,20 @@ img, video {
     padding: 32px 20px 8px;
   }
 
-  .team-intro,
+  .team-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 28px 20px 32px;
+  }
+
+  .team-hero-photo {
+    box-shadow: 8px 8px 0 var(--gold);
+  }
+
+  .team-hero-copy h1 {
+    font-size: 30px;
+  }
+
   .team-list {
     padding-left: 20px;
     padding-right: 20px;
@@ -633,8 +668,7 @@ img, video {
     font-size: 22px;
   }
 
-  .team-photos .extra-photo {
-    max-width: 150px;
-    max-height: 180px;
+  .team-photos {
+    gap: 6px;
   }
 }
