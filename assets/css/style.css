@@ -465,6 +465,22 @@ img, video {
   padding: 48px 32px 8px;
 }
 
+.contact-intro h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.contact-intro h1::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin-top: 10px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
 .contact-intro p {
   color: var(--text-secondary);
   font-size: 16px;
@@ -503,6 +519,15 @@ img, video {
   color: var(--text-primary);
 }
 
+.contact-form .optional {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.contact-form input::placeholder {
+  color: #a597b1;
+}
+
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
@@ -538,25 +563,31 @@ img, video {
 
 /* ---- responsive ---- */
 @media (max-width: 768px) {
+  /* logo on top, menu on its own row underneath so the long
+     "Book Alta Vola…" link stays on one line */
   .site-header {
-    padding: 12px 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 10px;
+    padding: 14px 12px 10px;
   }
 
   .logo img {
-    height: 42px;
-    width: 140px;
-  }
-
-  .main-nav a {
-    border-bottom-width: 2px;
+    height: 48px;
+    width: 160px;
   }
 
   .main-nav {
-    gap: 12px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px 16px;
   }
 
   .main-nav a {
     font-size: 12px;
+    white-space: nowrap;
+    border-bottom-width: 2px;
   }
 
   .hero {

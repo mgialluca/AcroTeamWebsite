@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alta Vola Acrobatics — Contact</title>
+  <title>Alta Vola Acrobatics — Book Alta Vola for Your Next Event</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -14,11 +14,12 @@
       <a href="../index.html">Home</a>
       <a href="gallery.html">Gallery</a>
       <a href="team.html">Team</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="contact.html" class="nav-book active">Book Alta Vola for Your Next Event</a>
     </nav>
   </header>
 
   <section class="contact-intro">
+    <h1>Book Alta Vola for Your Next Event</h1>
     <p>
       If you're interested in getting in touch or booking us for a gig,
       please fill out our contact form below!
@@ -41,6 +42,15 @@
       <label for="subject">Subject</label>
       <input type="text" id="subject" name="subject" required>
       <input type="hidden" name="_subject" id="subject-hidden" value="New message from Alta Vola Acrobatics site">
+
+      <label for="event-date">Event Date <span class="optional">(optional)</span></label>
+      <input type="text" id="event-date" name="event_date" placeholder="e.g. June 14, 2027, or a rough timeframe">
+
+      <label for="event-type">Event Type <span class="optional">(optional)</span></label>
+      <input type="text" id="event-type" name="event_type" placeholder="e.g. wedding, corporate party, festival">
+
+      <label for="venue">Indoor or Outdoor Venue <span class="optional">(optional)</span></label>
+      <input type="text" id="venue" name="venue" placeholder="Indoor, outdoor, or not sure yet">
 
       <label for="message">Message</label>
       <textarea id="message" name="message" rows="6" required></textarea>
