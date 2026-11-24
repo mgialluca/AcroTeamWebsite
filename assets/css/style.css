@@ -108,6 +108,14 @@ img, video {
   object-position: center 20%;
 }
 
+/* Hero video: trim the empty curtain off the top (9:16 -> 9:13.5)
+   so the section is shorter; anchoring to the bottom keeps the floor. */
+.hero-media video {
+  height: auto;
+  aspect-ratio: 9 / 13.5;
+  object-position: center bottom;
+}
+
 .hero-copy {
   flex: 0 0 auto;
   width: auto; /* hug the headline so the videos sit close to it */
@@ -579,11 +587,12 @@ img, video {
 
   .hero-show-mobile video,
   .hero-show-mobile img {
-    width: auto;
+    width: 100%;
     height: auto;
-    max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
+    aspect-ratio: 9 / 13.5;
+    object-fit: cover;
+    object-position: center bottom;
     border: 2px solid var(--accent);
     border-radius: 10px;
   }
