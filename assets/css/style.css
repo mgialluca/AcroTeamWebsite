@@ -563,25 +563,17 @@ img, video {
 
 /* ---- responsive ---- */
 @media (max-width: 768px) {
-  /* logo on top, menu on its own row underneath so the long
-     "Book Alta Vola…" link stays on one line */
   .site-header {
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap: 10px;
-    padding: 14px 12px 10px;
+    padding: 12px 16px;
   }
 
   .logo img {
-    height: 48px;
-    width: 160px;
+    height: 42px;
+    width: 140px;
   }
 
   .main-nav {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 4px 16px;
+    gap: 12px;
   }
 
   .main-nav a {
